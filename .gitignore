@@ -1,0 +1,9 @@
+﻿.conda/
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+results/
+video/
+model/
+*.log

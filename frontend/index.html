@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoSched 智策平台 · 首页总览</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-container">
+
+  <!-- ══ 侧边栏 ══ -->
+  <aside class="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-icon"><i class="bi bi-globe-americas"></i></div>
+      <div class="logo-text">
+        <div class="logo-name">GeoSched</div>
+        <div class="logo-sub">智策平台</div>
+      </div>
+    </a>
+    <nav class="nav-menu">
+      <a href="index.html"    class="nav-item active"><i class="bi bi-grid-fill nav-icon"></i><span>首页总览</span></a>
+      <a href="data.html"     class="nav-item"><i class="bi bi-database-fill nav-icon"></i><span>数据管理</span></a>
+      <a href="schedule.html" class="nav-item"><i class="bi bi-cpu-fill nav-icon"></i><span>智能调度</span></a>
+      <a href="analysis.html" class="nav-item"><i class="bi bi-bar-chart-fill nav-icon"></i><span>结果分析</span></a>
+      <a href="visual.html"   class="nav-item"><i class="bi bi-display-fill nav-icon"></i><span>可视化监控</span></a>
+      <a href="about.html"    class="nav-item"><i class="bi bi-info-circle-fill nav-icon"></i><span>系统说明</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-image-widget">
+        <img src="input/1.jpg" class="siw-img active" alt="">
+        <img src="input/2.jpg" class="siw-img" alt="">
+        <img src="input/3.jpg" class="siw-img" alt="">
+        <div class="siw-top-fade"></div>
+        <div class="siw-overlay"></div>
+        <div class="siw-caption">数字地球 · 全球网络</div>
+        <div class="siw-dots">
+          <span class="siw-dot active"></span>
+          <span class="siw-dot"></span>
+          <span class="siw-dot"></span>
+        </div>
+      </div>
+      <div class="siw-meta">GeoSched v1.0 &nbsp;·&nbsp; 2025</div>
+    </div>
+  </aside>
+
+  <!-- ══ 主区域 ══ -->
+  <div class="main-wrapper">
+    <header class="top-header">
+      <div class="header-left">
+        <div class="page-title">首页总览</div>
+        <div class="page-subtitle">多源数据驱动的智能调度与辅助决策系统</div>
+      </div>
+      <div class="header-right">
+        <button class="header-btn badge-dot"><i class="bi bi-bell"></i></button>
+        <button class="header-btn"><i class="bi bi-gear"></i></button>
+        <div class="user-info">
+          <div class="user-avatar"><i class="bi bi-person"></i></div>
+          <span class="user-name">管理员 <i class="bi bi-chevron-down" style="font-size:9px"></i></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-area">
+
+      <!-- KPI 卡片 -->
+      <div class="kpi-row">
+        <div class="kpi-card blue">
+          <div class="kpi-icon"><i class="bi bi-list-task"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">任务总数</div>
+            <div class="kpi-value" id="kpi-task-count"><span data-count="1248">1,248</span></div>
+            <div class="kpi-trend"><span class="trend-up"><i class="bi bi-arrow-up-short"></i>12.5%</span>&nbsp;较昨日</div>
+          </div>
+        </div>
+        <div class="kpi-card green">
+          <div class="kpi-icon"><i class="bi bi-hdd-stack-fill"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">资源数量</div>
+            <div class="kpi-value" id="kpi-sat-count"><span data-count="256">256</span></div>
+            <div class="kpi-trend"><span class="trend-up"><i class="bi bi-arrow-up-short"></i>8.3%</span>&nbsp;较昨日</div>
+          </div>
+        </div>
+        <div class="kpi-card orange">
+          <div class="kpi-icon"><i class="bi bi-currency-yen"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">方案收益（万元）</div>
+            <div class="kpi-value" id="kpi-profit">8,732<span>.6</span></div>
+            <div class="kpi-trend"><span class="trend-up"><i class="bi bi-arrow-up-short"></i>15.7%</span>&nbsp;较昨日</div>
+          </div>
+        </div>
+        <div class="kpi-card purple">
+          <div class="kpi-icon"><i class="bi bi-check-circle-fill"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">任务完成率</div>
+            <div class="kpi-value" id="kpi-completion">92.4<span>%</span></div>
+            <div class="kpi-trend"><span class="trend-up"><i class="bi bi-arrow-up-short"></i>6.2%</span>&nbsp;较昨日</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 模块导航卡片 -->
+      <div class="module-row">
+        <a href="data.html" class="module-card">
+          <div class="module-icon-wrap blue"><i class="bi bi-database-fill"></i></div>
+          <div class="module-name">数据管理模块</div>
+          <div class="module-desc">任务数据、资源数据、历史数据、导入与统计</div>
+          <div class="module-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </a>
+        <a href="schedule.html" class="module-card">
+          <div class="module-icon-wrap cyan"><i class="bi bi-cpu-fill"></i></div>
+          <div class="module-name">智能调度模块</div>
+          <div class="module-desc">参数设置、算法选择、开始调度、输出最优方案</div>
+          <div class="module-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </a>
+        <a href="analysis.html" class="module-card">
+          <div class="module-icon-wrap green"><i class="bi bi-bar-chart-fill"></i></div>
+          <div class="module-name">结果分析模块</div>
+          <div class="module-desc">收益、完成率分析、能耗分析、Pareto 前沿</div>
+          <div class="module-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </a>
+        <a href="visual.html" class="module-card">
+          <div class="module-icon-wrap orange"><i class="bi bi-display-fill"></i></div>
+          <div class="module-name">可视化监控模块</div>
+          <div class="module-desc">KPI指标、甘特图、时间轴、资源利用率</div>
+          <div class="module-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </a>
+        <a href="about.html" class="module-card">
+          <div class="module-icon-wrap purple"><i class="bi bi-book-fill"></i></div>
+          <div class="module-name">系统说明模块</div>
+          <div class="module-desc">系统架构、技术栈、创新点、团队介绍</div>
+          <div class="module-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        </a>
+      </div>
+
+      <!-- 底部图表区 -->
+      <div class="row-flex" style="height:310px">
+        <!-- 甘特图预览 -->
+        <div class="chart-card" style="flex:6">
+          <div class="card-header-row">
+            <div>
+              <div class="card-title">甘特图预览</div>
+              <div class="card-subtitle">本周任务执行时序</div>
+            </div>
+            <div class="card-actions">
+              <span class="tag-btn active">全部任务</span>
+              <span class="tag-btn">本周</span>
+              <a href="visual.html" class="tag-btn"><i class="bi bi-arrows-fullscreen"></i> 全屏</a>
+            </div>
+          </div>
+          <div id="gantt-chart" style="height:240px"></div>
+        </div>
+
+        <!-- 收益趋势 -->
+        <div class="chart-card" style="flex:4">
+          <div class="card-header-row">
+            <div>
+              <div class="card-title">收益趋势分析（万元）</div>
+              <div class="card-subtitle">方案收益 &amp; 任务完成率</div>
+            </div>
+            <div class="card-actions">
+              <span class="tag-btn active">近7天</span>
+              <span class="tag-btn"><i class="bi bi-download"></i></span>
+            </div>
+          </div>
+          <div id="trend-chart" style="height:240px"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+/* ── 甘特图 ── */
+(function () {
+  const chart = regChart(echarts.init(document.getElementById('gantt-chart')));
+  const resources = ['资源E','资源D','资源C','资源B','资源A'];
+  const COLORS = ['#1677ff','#22c55e','#f59e0b','#8b5cf6','#06b6d4'];
+  const TYPES  = ['任务类型1','任务类型2','任务类型3','任务类型4','任务类型5'];
+
+  const raw = [
+    [4,'2025-05-12 08:00','2025-05-12 19:00',0],[4,'2025-05-13 10:00','2025-05-13 22:00',2],
+    [4,'2025-05-15 06:00','2025-05-15 20:00',1],[4,'2025-05-17 08:00','2025-05-17 18:00',3],
+    [3,'2025-05-12 06:00','2025-05-12 20:00',1],[3,'2025-05-13 09:00','2025-05-13 17:00',0],
+    [3,'2025-05-15 10:00','2025-05-15 22:00',4],[3,'2025-05-17 06:00','2025-05-17 22:00',2],
+    [2,'2025-05-12 08:00','2025-05-12 22:00',2],[2,'2025-05-14 07:00','2025-05-14 20:00',0],
+    [2,'2025-05-16 06:00','2025-05-16 20:00',3],[2,'2025-05-18 08:00','2025-05-18 19:00',1],
+    [1,'2025-05-12 10:00','2025-05-12 22:00',3],[1,'2025-05-14 06:00','2025-05-14 18:00',2],
+    [1,'2025-05-16 08:00','2025-05-16 22:00',0],[1,'2025-05-18 06:00','2025-05-18 22:00',4],
+    [0,'2025-05-13 08:00','2025-05-13 20:00',4],[0,'2025-05-15 06:00','2025-05-15 18:00',1],
+    [0,'2025-05-16 10:00','2025-05-16 22:00',2],[0,'2025-05-18 08:00','2025-05-18 20:00',0],
+  ];
+
+  const data = raw.map(d => ({
+    value: [d[0], +new Date(d[1]), +new Date(d[2]), d[3]],
+    itemStyle: { color: COLORS[d[3]], borderRadius: 3 }
+  }));
+
+  chart.setOption({
+    backgroundColor:'transparent',
+    tooltip: {
+      ...TOOLTIP_STYLE,
+      formatter: p => {
+        const v = p.value;
+        const fmt = ts => new Date(ts).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+        return `<b>${resources[v[0]]}</b><br/>${TYPES[v[3]]}<br/>开始：${fmt(v[1])}<br/>结束：${fmt(v[2])}`;
+      }
+    },
+    legend: { data: TYPES, bottom: 2, textStyle:{color:'rgba(190,215,255,0.55)',fontSize:10}, itemWidth:12, itemHeight:7 },
+    grid: { top:6, bottom:40, left:60, right:16 },
+    xAxis: {
+      type:'time', min:'2025-05-12', max:'2025-05-19',
+      axisLabel:{ color:'rgba(190,215,255,0.55)', fontSize:10,
+        formatter: v => { const d=new Date(v); return `${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+      },
+      axisLine:{ lineStyle:{color:'rgba(50,130,240,0.2)'} },
+      splitLine:{ lineStyle:{color:'rgba(50,130,240,0.1)',type:'dashed'} }
+    },
+    yAxis: {
+      data: resources,
+      axisLabel:{ color:'rgba(190,215,255,0.55)', fontSize:10 },
+      axisLine:{ lineStyle:{color:'rgba(50,130,240,0.2)'} },
+      splitLine:{ show:false }
+    },
+    series:[{
+      type:'custom',
+      renderItem(params, api) {
+        const ci = api.value(0);
+        const s  = api.coord([api.value(1), ci]);
+        const e  = api.coord([api.value(2), ci]);
+        const h  = api.size([0,1])[1] * 0.52;
+        const shape = echarts.graphic.clipRectByRect(
+          { x:s[0], y:s[1]-h/2, width:e[0]-s[0], height:h },
+          { x:params.coordSys.x, y:params.coordSys.y, width:params.coordSys.width, height:params.coordSys.height }
+        );
+        return shape && { type:'rect', transition:['shape'], shape, style:api.style() };
+      },
+      encode:{ x:[1,2], y:0 },
+      data
+    }]
+  });
+}());
+
+/* ── 收益趋势 ── */
+(function () {
+  const chart = regChart(echarts.init(document.getElementById('trend-chart')));
+  const dates   = ['05-12','05-13','05-14','05-15','05-16','05-17','05-18'];
+  const revenue = [6120,6842,7215,7886,8312,8103,8733];
+  const rate    = [78.1,82.3,85.7,88.9,91.2,90.3,92.4];
+
+  chart.setOption({
+    backgroundColor:'transparent',
+    tooltip:{ trigger:'axis', ...TOOLTIP_STYLE },
+    legend:{ data:['方案收益(万元)','任务完成率(%)'], top:0, right:0,
+      textStyle:{color:'rgba(190,215,255,0.55)',fontSize:10}, itemWidth:12, itemHeight:7 },
+    grid:{ top:28, bottom:28, left:50, right:46 },
+    xAxis:{
+      type:'category', data:dates,
+      axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10},
+      axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}},
+      splitLine:{show:false}
+    },
+    yAxis:[
+      { type:'value', min:4000,
+        axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10},
+        axisLine:{show:false},
+        splitLine:{lineStyle:{color:'rgba(50,130,240,0.1)',type:'dashed'}}
+      },
+      { type:'value', min:60, max:100,
+        axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10,formatter:'{value}%'},
+        axisLine:{show:false}, splitLine:{show:false}
+      }
+    ],
+    series:[
+      {
+        name:'方案收益(万元)', type:'bar', data:revenue, barWidth:'48%',
+        itemStyle:{ color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#1677ff'},{offset:1,color:'rgba(22,119,255,0.25)'}]), borderRadius:[3,3,0,0] },
+        label:{ show:true, position:'top', color:'rgba(190,215,255,0.7)', fontSize:9, formatter:p=>p.value.toLocaleString() }
+      },
+      {
+        name:'任务完成率(%)', type:'line', yAxisIndex:1, data:rate, smooth:true,
+        lineStyle:{color:'#22c55e',width:2},
+        itemStyle:{color:'#22c55e'}, symbol:'circle', symbolSize:5,
+        label:{ show:true, color:'#4ade80', fontSize:9, formatter:'{c}%' },
+        areaStyle:{ color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(34,197,94,0.18)'},{offset:1,color:'rgba(34,197,94,0)'}]) }
+      }
+    ]
+  });
+}());
+
+// ── 从 API 更新首页 KPI ──
+(async function () {
+  const API_BASE = 'http://localhost:8000';
+  try {
+    const [ldRes, rdRes] = await Promise.all([
+      fetch(API_BASE + '/load_data?count=1').then(r => r.json()),
+      fetch(API_BASE + '/result').then(r => r.json()),
+    ]);
+    if (ldRes.status === 'ok') {
+      const ts = ldRes.data.task_summary;
+      const ss = ldRes.data.satellite_summary;
+      document.getElementById('kpi-task-count').textContent = ts.total.toLocaleString('zh-CN');
+      document.getElementById('kpi-sat-count').textContent  = ss.total.toLocaleString('zh-CN');
+    }
+    if (rdRes.status === 'ok') {
+      const s = rdRes.data.summary;
+      document.getElementById('kpi-profit').innerHTML     = s.best_profit.toLocaleString('zh-CN', {minimumFractionDigits:1}) + '<span style="font-size:14px;font-weight:400"> 万元</span>';
+      document.getElementById('kpi-completion').innerHTML = rdRes.data.algo_comparison.completion_rate[0] + '<span>%</span>';
+    }
+  } catch(e) { /* 后端未启动，保留静态数据 */ }
+}());
+</script>
+</body>
+</html>

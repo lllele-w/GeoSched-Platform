@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoSched 智策平台 · 结果分析</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-container">
+
+  <aside class="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-icon"><i class="bi bi-globe-americas"></i></div>
+      <div class="logo-text"><div class="logo-name">GeoSched</div><div class="logo-sub">智策平台</div></div>
+    </a>
+    <nav class="nav-menu">
+      <a href="index.html"    class="nav-item"><i class="bi bi-grid-fill nav-icon"></i><span>首页总览</span></a>
+      <a href="data.html"     class="nav-item"><i class="bi bi-database-fill nav-icon"></i><span>数据管理</span></a>
+      <a href="schedule.html" class="nav-item"><i class="bi bi-cpu-fill nav-icon"></i><span>智能调度</span></a>
+      <a href="analysis.html" class="nav-item active"><i class="bi bi-bar-chart-fill nav-icon"></i><span>结果分析</span></a>
+      <a href="visual.html"   class="nav-item"><i class="bi bi-display-fill nav-icon"></i><span>可视化监控</span></a>
+      <a href="about.html"    class="nav-item"><i class="bi bi-info-circle-fill nav-icon"></i><span>系统说明</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-image-widget">
+        <img src="input/1.jpg" class="siw-img active" alt="">
+        <img src="input/2.jpg" class="siw-img" alt="">
+        <img src="input/3.jpg" class="siw-img" alt="">
+        <div class="siw-top-fade"></div>
+        <div class="siw-overlay"></div>
+        <div class="siw-caption">数字地球 · 全球网络</div>
+        <div class="siw-dots">
+          <span class="siw-dot active"></span>
+          <span class="siw-dot"></span>
+          <span class="siw-dot"></span>
+        </div>
+      </div>
+      <div class="siw-meta">GeoSched v1.0 &nbsp;·&nbsp; 2025</div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="top-header">
+      <div class="header-left">
+        <div class="page-title">结果分析与可视化监控</div>
+        <div class="page-subtitle">算法效果评估与运行状态直观展示</div>
+      </div>
+      <div class="header-right">
+        <span style="font-size:12px;color:var(--text-2);margin-right:4px">
+          <i class="bi bi-calendar3"></i> 2025-05-12 ~ 2025-05-18
+        </span>
+        <select style="background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);padding:5px 10px;border-radius:7px;font-size:12px;font-family:inherit;outline:none;margin-right:8px">
+          <option>全部场景</option><option>光学成像</option><option>雷达侦察</option>
+        </select>
+        <button class="header-btn"><i class="bi bi-bell"></i></button>
+        <div class="user-info">
+          <div class="user-avatar"><i class="bi bi-person"></i></div>
+          <span class="user-name">管理员</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-area">
+
+      <!-- 核心对比指标行 -->
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:16px">
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">最优算法</div>
+          <div class="metric-value" style="color:#60a5fa;text-shadow:0 0 18px rgba(96,165,250,0.45)">Proposed</div>
+          <div class="metric-best-badge"><i class="bi bi-star-fill" style="font-size:9px"></i>综合最优</div>
+        </div>
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">收益提升</div>
+          <div class="metric-value" style="color:#4ade80">+12.4%</div>
+          <div class="metric-sub">相较次优算法</div>
+        </div>
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">能耗下降</div>
+          <div class="metric-value" style="color:#f87171">-15.8%</div>
+          <div class="metric-sub">相较次优算法</div>
+        </div>
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">任务覆盖</div>
+          <div class="metric-value" style="color:#4ade80">+8.6%</div>
+          <div class="metric-sub">相较次优算法</div>
+        </div>
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">方案收益</div>
+          <div class="metric-value" style="color:#fbbf24">8,732.6</div>
+          <div class="metric-sub">万元</div>
+        </div>
+        <div class="chart-card" style="padding:14px 16px">
+          <div class="metric-label">资源利用均衡</div>
+          <div class="metric-value" style="color:#22d3ee">是</div>
+          <div class="metric-sub">负载均衡提升18.3%</div>
+        </div>
+      </div>
+
+      <!-- 主图表区：3 列 -->
+      <div class="row-flex" style="margin-bottom:14px">
+        <!-- 算法对比柱状图 -->
+        <div class="chart-card" style="flex:4">
+          <div class="card-header-row">
+            <div>
+              <div class="card-title">算法对比（综合收益）</div>
+              <div class="card-subtitle">单位：万元</div>
+            </div>
+            <div class="card-actions">
+              <span class="tag-btn active">收益</span>
+              <span class="tag-btn" onclick="switchMetric(this,'rate')">完成率</span>
+              <span class="tag-btn" onclick="switchMetric(this,'energy')">能耗</span>
+            </div>
+          </div>
+          <div id="bar-chart" style="height:240px"></div>
+        </div>
+
+        <!-- Pareto 前沿 -->
+        <div class="chart-card" style="flex:5">
+          <div class="card-header-row">
+            <div>
+              <div class="card-title">Pareto 前沿（能耗 vs 完成率）</div>
+              <div class="card-subtitle">1任务能耗(kWh/任务) vs 完成率(%)</div>
+            </div>
+            <div class="card-actions">
+              <span class="tag-btn active"><i class="bi bi-arrows-fullscreen"></i></span>
+            </div>
+          </div>
+          <div id="pareto-chart" style="height:240px"></div>
+        </div>
+
+        <!-- 分析建议 -->
+        <div class="chart-card" style="flex:3">
+          <div class="card-title mb-3">分析建议</div>
+          <div class="analysis-item green">
+            <div class="ai-icon"><i class="bi bi-check"></i></div>
+            <div class="ai-body">
+              <div class="ai-title">收益显著提升</div>
+              <div class="ai-text">Proposed 算法较次优算法收益提升 12.4%，综合表现最优</div>
+            </div>
+          </div>
+          <div class="analysis-item green">
+            <div class="ai-icon"><i class="bi bi-check"></i></div>
+            <div class="ai-body">
+              <div class="ai-title">任务覆盖率高</div>
+              <div class="ai-text">任务完成率达到 92.4%，较 Greedy 基线提升 8.6%</div>
+            </div>
+          </div>
+          <div class="analysis-item">
+            <div class="ai-icon"><i class="bi bi-lightning"></i></div>
+            <div class="ai-body">
+              <div class="ai-title">能耗显著下降</div>
+              <div class="ai-text">单位能耗降低 15.8%，能源使用效率提升</div>
+            </div>
+          </div>
+          <div class="analysis-item green">
+            <div class="ai-icon"><i class="bi bi-check"></i></div>
+            <div class="ai-body">
+              <div class="ai-title">资源利用更均衡</div>
+              <div class="ai-text">各卫星利用率均衡性提升，系统稳定性更优</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <div style="font-size:12px;font-weight:600;color:var(--text-1);margin-bottom:8px">决策建议</div>
+          <div style="font-size:11px;color:var(--text-2);line-height:1.8">
+            <div style="margin-bottom:4px">• 推荐采用 Proposed 算法进行实际调度部署</div>
+            <div style="margin-bottom:4px">• 持续关注下方窗口的利用率波动</div>
+            <div style="margin-bottom:4px">• 在数据更新后重新优化，可获更多场景下的鲁棒性验证</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下方：资源利用率趋势 + 任务甘特 -->
+      <div class="row-flex" style="height:240px">
+        <div class="chart-card" style="flex:1">
+          <div class="card-header-row mb-2">
+            <div class="card-title">资源利用率趋势</div>
+            <div class="card-actions">
+              <span class="tag-btn active">资源A</span>
+              <span class="tag-btn">资源B</span>
+              <span class="tag-btn">资源C</span>
+            </div>
+          </div>
+          <div id="res-util-chart" style="height:180px"></div>
+        </div>
+        <div class="chart-card" style="flex:1">
+          <div class="card-header-row mb-2">
+            <div class="card-title">任务执行甘特图（资源-任务时间轴）</div>
+            <a href="visual.html" class="tag-btn"><i class="bi bi-arrows-fullscreen"></i> 全屏</a>
+          </div>
+          <div id="task-gantt" style="height:180px"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+const API_BASE = 'http://localhost:8000';
+
+window.addEventListener('load', async () => {
+
+  // ── 先拉 API 数据，失败则用本地兜底 ──
+  let rd = null;
+  try {
+    const res = await fetch(API_BASE + '/result');
+    const json = await res.json();
+    if (json.status === 'ok') rd = json.data;
+  } catch(e) { /* 后端未启动，使用本地数据 */ }
+
+  // 兜底数据
+  const algos     = rd?.algo_comparison?.algorithms ?? ['NSGA-II','MOEA/D','NSGA-III','Proposed','Greedy'];
+  const profitArr = rd?.algo_comparison?.profit      ?? [7210.3,7683.5,7945.7,8732.6,4154.2];
+  const rateArr   = rd?.algo_comparison?.completion_rate ?? [82.1,85.3,87.6,92.4,76.8];
+  const energyArr = rd?.algo_comparison?.energy      ?? [2.4,2.1,1.9,1.28,1.7];
+  const paretoRaw = rd?.pareto ?? null;
+
+  // ── 算法对比柱状图 ──
+  const barChart = regChart(echarts.init(document.getElementById('bar-chart')));
+  const METRICS = {
+    revenue:  { data: profitArr,  label:'收益(万元)',         colors:['#8b5cf6','#06b6d4','#22c55e','#1677ff','#94a3b8'] },
+    rate:     { data: rateArr,    label:'完成率(%)',           colors:['#8b5cf6','#06b6d4','#22c55e','#1677ff','#94a3b8'] },
+    energy:   { data: energyArr,  label:'单位能耗(kWh/任务)', colors:['#94a3b8','#94a3b8','#94a3b8','#22c55e','#94a3b8'] },
+  };
+  let curMetric = 'revenue';
+
+  function updateBar(metric) {
+    curMetric = metric;
+    const m = METRICS[metric];
+    barChart.setOption({
+      backgroundColor:'transparent',
+      tooltip:{ trigger:'axis', ...TOOLTIP_STYLE },
+      grid:{ top:16, bottom:30, left:metric==='energy'?46:60, right:16 },
+      xAxis:{ type:'category', data:algos,
+        axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:11}, axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}}, splitLine:{show:false} },
+      yAxis:{ type:'value', name:m.label, nameTextStyle:{color:'rgba(190,215,255,0.4)',fontSize:9},
+        axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10}, axisLine:{show:false}, splitLine:{lineStyle:{color:'rgba(50,130,240,0.1)',type:'dashed'}} },
+      series:[{
+        type:'bar', data:m.data.map((v,i)=>({ value:v, itemStyle:{color:m.colors[i], borderRadius:[4,4,0,0]} })),
+        barWidth:'50%',
+        label:{ show:true, position:'top', color:'rgba(190,215,255,0.7)', fontSize:10,
+          formatter: p => metric==='revenue' ? p.value.toLocaleString() : p.value }
+      }]
+    });
+  }
+  updateBar('revenue');
+
+  window.switchMetric = function(el, m) {
+    document.querySelectorAll('.card-actions .tag-btn').forEach(t=>t.classList.remove('active'));
+    el.classList.add('active');
+    updateBar(m);
+  };
+
+  // ── Pareto 前沿 ──
+  const paretoChart = regChart(echarts.init(document.getElementById('pareto-chart')));
+  const pColors = { 'NSGA-II':'#8b5cf6','MOEA/D':'#f59e0b','NSGA-III':'#22c55e','Greedy':'#94a3b8','Proposed':'#1677ff' };
+  const pBases  = { 'NSGA-II':[2.8,82],'MOEA/D':[2.2,85],'NSGA-III':[1.8,88],'Greedy':[3.1,77],'Proposed':[1.2,92] };
+  const pSeries = Object.entries(pColors).map(([name, color]) => {
+    // 优先使用 API 数据，否则本地随机生成
+    let data;
+    if (paretoRaw && paretoRaw[name]) {
+      data = paretoRaw[name];
+    } else {
+      const base = pBases[name];
+      const n = name === 'Proposed' ? 1 : 10;
+      data = Array.from({length:n}, () => ([
+        base[0] + (Math.random()-.5) * (name==='Proposed' ? .15 : 1.2),
+        base[1] + (Math.random()-.5) * (name==='Proposed' ? .5  : 6),
+      ]));
+    }
+    const base = pBases[name];
+    return { name, type:'scatter', data, symbolSize: name==='Proposed'?14:7, itemStyle:{color},
+      markPoint: name==='Proposed' ? { data:[{ coord:base, symbol:'pin', symbolSize:20, label:{show:true,formatter:'Proposed\n最优',fontSize:9,color:'#fff'}, itemStyle:{color:'#1677ff'} }] } : undefined
+    };
+  });
+  paretoChart.setOption({
+    backgroundColor:'transparent',
+    tooltip:{ ...TOOLTIP_STYLE, formatter:p=>`<b>${p.seriesName}</b><br/>能耗：${p.data[0].toFixed(2)} kWh/任务<br/>完成率：${p.data[1].toFixed(1)}%` },
+    legend:{ data:Object.keys(pColors), bottom:2, textStyle:{color:'rgba(190,215,255,0.55)',fontSize:10}, itemWidth:12, itemHeight:7 },
+    grid:{ top:10, bottom:36, left:46, right:14 },
+    xAxis:{ type:'value', name:'单位能耗(kWh/任务)', nameTextStyle:{color:'rgba(190,215,255,0.4)',fontSize:9},
+      axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10}, axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}}, splitLine:{lineStyle:{color:'rgba(50,130,240,0.08)',type:'dashed'}} },
+    yAxis:{ type:'value', name:'完成率(%)', min:65, max:100,
+      nameTextStyle:{color:'rgba(190,215,255,0.4)',fontSize:9},
+      axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10,formatter:'{value}%'}, axisLine:{show:false}, splitLine:{lineStyle:{color:'rgba(50,130,240,0.08)',type:'dashed'}} },
+    series: pSeries
+  });
+
+  // ── 资源利用率趋势 ──
+  const resChart = regChart(echarts.init(document.getElementById('res-util-chart')));
+  resChart.setOption({
+    backgroundColor:'transparent',
+    tooltip:{ trigger:'axis', ...TOOLTIP_STYLE },
+    legend:{ data:['资源A','资源B','资源C'], bottom:0, textStyle:{color:'rgba(190,215,255,0.55)',fontSize:10}, itemWidth:12, itemHeight:6 },
+    grid:{ top:6, bottom:28, left:36, right:12 },
+    xAxis:{ type:'category', data:['05-12','05-13','05-14','05-15','05-16','05-17','05-18'],
+      axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10}, axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}}, splitLine:{show:false} },
+    yAxis:{ type:'value', min:40, max:100,
+      axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:10,formatter:'{value}%'}, axisLine:{show:false}, splitLine:{lineStyle:{color:'rgba(50,130,240,0.1)',type:'dashed'}} },
+    series:[
+      { name:'资源A', type:'line', smooth:true, data:[72,76,80,84,87,85,87], lineStyle:{color:'#1677ff',width:2}, itemStyle:{color:'#1677ff'}, symbolSize:5,
+        areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(22,119,255,0.2)'},{offset:1,color:'rgba(22,119,255,0)'}])} },
+      { name:'资源B', type:'line', smooth:true, data:[58,62,65,68,67,65,66], lineStyle:{color:'#22c55e',width:2}, itemStyle:{color:'#22c55e'}, symbolSize:5,
+        areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(34,197,94,0.15)'},{offset:1,color:'rgba(34,197,94,0)'}])} },
+      { name:'资源C', type:'line', smooth:true, data:[46,50,53,56,55,53,55], lineStyle:{color:'#f59e0b',width:2}, itemStyle:{color:'#f59e0b'}, symbolSize:5,
+        areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(245,158,11,0.15)'},{offset:1,color:'rgba(245,158,11,0)'}])} },
+    ]
+  });
+
+  // ── 任务甘特（简化） ──
+  const ganttChart = regChart(echarts.init(document.getElementById('task-gantt')));
+  const resources = ['资源E','资源D','资源C','资源B','资源A'];
+  const COLORS = ['#1677ff','#22c55e','#f59e0b','#8b5cf6','#06b6d4'];
+  const TYPES  = ['已完成','进行中','待执行','等待中','异常'];
+
+  const raw = [
+    [4,'2025-05-12 08:00','2025-05-12 18:00',0],[4,'2025-05-13 10:00','2025-05-13 22:00',1],
+    [4,'2025-05-15 06:00','2025-05-15 18:00',0],[4,'2025-05-17 08:00','2025-05-17 16:00',2],
+    [3,'2025-05-12 06:00','2025-05-12 20:00',0],[3,'2025-05-14 08:00','2025-05-14 18:00',1],
+    [3,'2025-05-16 10:00','2025-05-16 22:00',0],[3,'2025-05-18 06:00','2025-05-18 18:00',2],
+    [2,'2025-05-12 08:00','2025-05-12 22:00',1],[2,'2025-05-14 07:00','2025-05-14 20:00',0],
+    [2,'2025-05-16 06:00','2025-05-16 20:00',4],[2,'2025-05-18 08:00','2025-05-18 18:00',0],
+    [1,'2025-05-12 10:00','2025-05-12 22:00',0],[1,'2025-05-14 06:00','2025-05-14 18:00',1],
+    [1,'2025-05-16 08:00','2025-05-16 20:00',2],[1,'2025-05-18 06:00','2025-05-18 20:00',0],
+    [0,'2025-05-13 08:00','2025-05-13 20:00',0],[0,'2025-05-15 06:00','2025-05-15 18:00',3],
+    [0,'2025-05-16 10:00','2025-05-16 22:00',1],[0,'2025-05-18 08:00','2025-05-18 20:00',0],
+  ];
+
+  const gdata = raw.map(d => ({
+    value:[d[0],+new Date(d[1]),+new Date(d[2]),d[3]],
+    itemStyle:{color:COLORS[d[3]],borderRadius:2}
+  }));
+
+  ganttChart.setOption({
+    backgroundColor:'transparent',
+    tooltip:{ ...TOOLTIP_STYLE,
+      formatter:p=>{ const v=p.value; const f=t=>new Date(t).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+        return `${resources[v[0]]}<br/>${TYPES[v[3]]}<br/>${f(v[1])} ~ ${f(v[2])}`; }
+    },
+    legend:{ data:TYPES, bottom:0, textStyle:{color:'rgba(190,215,255,0.55)',fontSize:9}, itemWidth:10, itemHeight:6 },
+    grid:{ top:4, bottom:28, left:56, right:14 },
+    xAxis:{ type:'time', min:'2025-05-12', max:'2025-05-19',
+      axisLabel:{ color:'rgba(190,215,255,0.55)', fontSize:9,
+        formatter:v=>{ const d=new Date(v); return `${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+      },
+      axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}}, splitLine:{lineStyle:{color:'rgba(50,130,240,0.08)',type:'dashed'}}
+    },
+    yAxis:{ data:resources, axisLabel:{color:'rgba(190,215,255,0.55)',fontSize:9}, axisLine:{lineStyle:{color:'rgba(50,130,240,0.2)'}}, splitLine:{show:false} },
+    series:[{
+      type:'custom',
+      renderItem(params,api){
+        const ci=api.value(0); const s=api.coord([api.value(1),ci]); const e=api.coord([api.value(2),ci]);
+        const h=api.size([0,1])[1]*0.5;
+        const shape=echarts.graphic.clipRectByRect({x:s[0],y:s[1]-h/2,width:e[0]-s[0],height:h},
+          {x:params.coordSys.x,y:params.coordSys.y,width:params.coordSys.width,height:params.coordSys.height});
+        return shape&&{type:'rect',transition:['shape'],shape,style:api.style()};
+      },
+      encode:{x:[1,2],y:0}, data:gdata
+    }]
+  });
+
+});
+</script>
+</body>
+</html>

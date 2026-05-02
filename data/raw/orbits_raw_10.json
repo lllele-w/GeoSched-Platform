@@ -1,0 +1,82 @@
+[
+  {
+    "id": 843,
+    "eccentricity": 0.0014587,
+    "semi_major_axis": 7785000.0,
+    "inclination": 82.485,
+    "right_ascension_of_the_ascending_node": 120.1433,
+    "argument_of_perigee": 102.4433
+  },
+  {
+    "id": 1968,
+    "eccentricity": 0.0002016,
+    "semi_major_axis": 7571000.0,
+    "inclination": 87.9144,
+    "right_ascension_of_the_ascending_node": 119.051,
+    "argument_of_perigee": 73.8584
+  },
+  {
+    "id": 2095,
+    "eccentricity": 0.0001675,
+    "semi_major_axis": 7571000.0,
+    "inclination": 87.9282,
+    "right_ascension_of_the_ascending_node": 27.5192,
+    "argument_of_perigee": 85.3073
+  },
+  {
+    "id": 2168,
+    "eccentricity": 0.0002075,
+    "semi_major_axis": 7571000.0,
+    "inclination": 87.8969,
+    "right_ascension_of_the_ascending_node": 73.2327,
+    "argument_of_perigee": 86.1351
+  },
+  {
+    "id": 2666,
+    "eccentricity": 0.0004731,
+    "semi_major_axis": 6921000.0,
+    "inclination": 53.0662,
+    "right_ascension_of_the_ascending_node": 167.3904,
+    "argument_of_perigee": 33.2579
+  },
+  {
+    "id": 3351,
+    "eccentricity": 0.0001531,
+    "semi_major_axis": 6921000.0,
+    "inclination": 53.0551,
+    "right_ascension_of_the_ascending_node": 324.0136,
+    "argument_of_perigee": 67.8317
+  },
+  {
+    "id": 3529,
+    "eccentricity": 0.0001491,
+    "semi_major_axis": 6921000.0,
+    "inclination": 53.0541,
+    "right_ascension_of_the_ascending_node": 42.7309,
+    "argument_of_perigee": 88.6424
+  },
+  {
+    "id": 3776,
+    "eccentricity": 0.0001166,
+    "semi_major_axis": 6921000.0,
+    "inclination": 53.0547,
+    "right_ascension_of_the_ascending_node": 82.6652,
+    "argument_of_perigee": 76.4613
+  },
+  {
+    "id": 5990,
+    "eccentricity": 0.0001262,
+    "semi_major_axis": 6921000.0,
+    "inclination": 53.2179,
+    "right_ascension_of_the_ascending_node": 314.3702,
+    "argument_of_perigee": 79.7701
+  },
+  {
+    "id": 6360,
+    "eccentricity": 0.0002916,
+    "semi_major_axis": 6921000.0,
+    "inclination": 69.9999,
+    "right_ascension_of_the_ascending_node": 49.2931,
+    "argument_of_perigee": 262.7395
+  }
+]

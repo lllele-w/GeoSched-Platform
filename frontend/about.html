@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoSched 智策平台 · 系统说明</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tech-tag {
+      display:inline-block; padding:3px 10px; border-radius:20px;
+      font-size:11px; margin:3px 3px;
+      background:rgba(22,119,255,0.12); border:1px solid rgba(22,119,255,0.3); color:#60a5fa;
+    }
+    .tech-tag.green  { background:rgba(34,197,94,0.12); border-color:rgba(34,197,94,0.3); color:#4ade80; }
+    .tech-tag.orange { background:rgba(245,158,11,0.12); border-color:rgba(245,158,11,0.3); color:#fbbf24; }
+    .tech-tag.purple { background:rgba(139,92,246,0.12); border-color:rgba(139,92,246,0.3); color:#a78bfa; }
+    .tech-tag.cyan   { background:rgba(6,182,212,0.12); border-color:rgba(6,182,212,0.3); color:#22d3ee; }
+    .inno-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:20px;
+      display:flex; gap:14px; align-items:flex-start;
+      transition:var(--tr); margin-bottom:12px;
+    }
+    .inno-card:hover { border-color:var(--accent); transform:translateX(4px); }
+    .inno-num {
+      width:36px; height:36px; border-radius:50%; flex-shrink:0;
+      display:flex; align-items:center; justify-content:center;
+      font-size:15px; font-weight:700; color:#fff;
+    }
+    .inno-title { font-size:14px; font-weight:600; color:var(--text-1); margin-bottom:5px; }
+    .inno-text  { font-size:12px; color:var(--text-2); line-height:1.8; }
+    .value-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .value-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:18px; text-align:center; transition:var(--tr);
+    }
+    .value-card:hover { border-color:var(--border-hover); }
+    .value-icon { font-size:28px; margin-bottom:8px; }
+    .value-title { font-size:13px; font-weight:600; color:var(--text-1); margin-bottom:5px; }
+    .value-text  { font-size:11px; color:var(--text-2); line-height:1.7; }
+  </style>
+</head>
+<body>
+<div class="app-container">
+
+  <aside class="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-icon"><i class="bi bi-globe-americas"></i></div>
+      <div class="logo-text"><div class="logo-name">GeoSched</div><div class="logo-sub">智策平台</div></div>
+    </a>
+    <nav class="nav-menu">
+      <a href="index.html"    class="nav-item"><i class="bi bi-grid-fill nav-icon"></i><span>首页总览</span></a>
+      <a href="data.html"     class="nav-item"><i class="bi bi-database-fill nav-icon"></i><span>数据管理</span></a>
+      <a href="schedule.html" class="nav-item"><i class="bi bi-cpu-fill nav-icon"></i><span>智能调度</span></a>
+      <a href="analysis.html" class="nav-item"><i class="bi bi-bar-chart-fill nav-icon"></i><span>结果分析</span></a>
+      <a href="visual.html"   class="nav-item"><i class="bi bi-display-fill nav-icon"></i><span>可视化监控</span></a>
+      <a href="about.html"    class="nav-item active"><i class="bi bi-info-circle-fill nav-icon"></i><span>系统说明</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-image-widget">
+        <img src="input/1.jpg" class="siw-img active" alt="">
+        <img src="input/2.jpg" class="siw-img" alt="">
+        <img src="input/3.jpg" class="siw-img" alt="">
+        <div class="siw-top-fade"></div>
+        <div class="siw-overlay"></div>
+        <div class="siw-caption">数字地球 · 全球网络</div>
+        <div class="siw-dots">
+          <span class="siw-dot active"></span>
+          <span class="siw-dot"></span>
+          <span class="siw-dot"></span>
+        </div>
+      </div>
+      <div class="siw-meta">GeoSched v1.0 &nbsp;·&nbsp; 2025</div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="top-header">
+      <div class="header-left">
+        <div class="page-title">系统说明</div>
+        <div class="page-subtitle">技术架构 · 创新点 · 应用价值 · 团队介绍</div>
+      </div>
+      <div class="header-right">
+        <button class="header-btn badge-dot"><i class="bi bi-bell"></i></button>
+        <button class="btn-ghost"><i class="bi bi-download"></i> 下载文档</button>
+        <div class="user-info">
+          <div class="user-avatar"><i class="bi bi-person"></i></div>
+          <span class="user-name">管理员</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-area">
+
+      <!-- Hero 区 -->
+      <div class="about-hero">
+        <h1>GeoSched 智策平台</h1>
+        <p class="hero-sub">多源数据驱动的智能调度与辅助决策系统</p>
+        <div style="margin-top:16px;display:flex;justify-content:center;gap:20px;font-size:13px;color:var(--text-2)">
+          <span><i class="bi bi-calendar-check" style="color:#60a5fa"></i> 版本 v1.0.0</span>
+          <span><i class="bi bi-people-fill" style="color:#4ade80"></i> 4 人团队</span>
+          <span><i class="bi bi-code-slash" style="color:#fbbf24"></i> Python + HTML + ECharts</span>
+          <span><i class="bi bi-github" style="color:#a78bfa"></i> 开源协议 MIT</span>
+        </div>
+      </div>
+
+      <!-- 技术架构图 -->
+      <div class="chart-card mb-4">
+        <div class="section-title">技术架构</div>
+        <div class="arch-row">
+          <div class="arch-layer" style="background:rgba(22,119,255,0.06);border-color:rgba(22,119,255,0.25)">
+            <div class="arch-layer-icon" style="color:#60a5fa"><i class="bi bi-database-fill"></i></div>
+            <div class="arch-layer-name">数据层</div>
+            <div class="arch-layer-items">任务数据<br/>资源数据<br/>历史记录<br/>CSV / JSON</div>
+          </div>
+          <div class="arch-layer" style="background:rgba(6,182,212,0.06);border-color:rgba(6,182,212,0.25)">
+            <div class="arch-layer-icon" style="color:#22d3ee"><i class="bi bi-cpu-fill"></i></div>
+            <div class="arch-layer-name">算法层</div>
+            <div class="arch-layer-items">Greedy 基线<br/>NSGA-III<br/>DE 差分进化<br/>Proposed 改进</div>
+          </div>
+          <div class="arch-layer" style="background:rgba(139,92,246,0.06);border-color:rgba(139,92,246,0.25)">
+            <div class="arch-layer-icon" style="color:#a78bfa"><i class="bi bi-server"></i></div>
+            <div class="arch-layer-name">服务层</div>
+            <div class="arch-layer-items">Flask 后端<br/>REST API<br/>数据处理<br/>方案管理</div>
+          </div>
+          <div class="arch-layer" style="background:rgba(34,197,94,0.06);border-color:rgba(34,197,94,0.25)">
+            <div class="arch-layer-icon" style="color:#4ade80"><i class="bi bi-display-fill"></i></div>
+            <div class="arch-layer-name">展示层</div>
+            <div class="arch-layer-items">HTML5 前端<br/>ECharts 可视化<br/>Bootstrap 5<br/>响应式布局</div>
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <div style="font-size:12px;color:var(--text-2);margin-bottom:8px">核心技术栈：</div>
+          <span class="tech-tag"><i class="bi bi-code-slash"></i> Python 3.10</span>
+          <span class="tech-tag green"><i class="bi bi-flask"></i> Flask 2.x</span>
+          <span class="tech-tag orange"><i class="bi bi-graph-up"></i> NumPy / Pandas</span>
+          <span class="tech-tag purple"><i class="bi bi-cpu"></i> pymoo (NSGA-III)</span>
+          <span class="tech-tag cyan"><i class="bi bi-pie-chart-fill"></i> ECharts 5</span>
+          <span class="tech-tag"><i class="bi bi-layout-text-sidebar-reverse"></i> Bootstrap 5</span>
+          <span class="tech-tag green"><i class="bi bi-filetype-html"></i> HTML5 / CSS3</span>
+          <span class="tech-tag orange"><i class="bi bi-filetype-js"></i> JavaScript ES6+</span>
+        </div>
+      </div>
+
+      <!-- 主要功能模块 -->
+      <div class="feature-grid mb-4">
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#60a5fa"><i class="bi bi-database-fill"></i></div>
+          <div class="fc-title">数据管理模块</div>
+          <div class="fc-text">支持 CSV 文件导入、数据预览与统计、可视化分析，自动生成测试数据，覆盖任务数据与卫星资源管理全流程。</div>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#22d3ee"><i class="bi bi-cpu-fill"></i></div>
+          <div class="fc-title">智能调度模块</div>
+          <div class="fc-text">集成 Greedy、NSGA-III、DE、Proposed 多种算法，支持参数可视化调节、多目标权重配置，实时输出最优调度方案。</div>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#4ade80"><i class="bi bi-bar-chart-fill"></i></div>
+          <div class="fc-title">结果分析模块</div>
+          <div class="fc-text">多维度算法对比图表、Pareto 前沿可视化、收益/能耗/完成率雷达图，自动生成分析报告与决策建议。</div>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#fbbf24"><i class="bi bi-display-fill"></i></div>
+          <div class="fc-title">可视化监控模块</div>
+          <div class="fc-text">动态甘特图、时间轴播放控制、实时资源利用率监控，直观展示任务执行状态与调度效果。</div>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#a78bfa"><i class="bi bi-shield-check-fill"></i></div>
+          <div class="fc-title">约束处理机制</div>
+          <div class="fc-text">支持时间窗口、能量约束、任务优先级等多种约束条件，精准模拟真实遥感卫星调度场景。</div>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon" style="color:#22d3ee"><i class="bi bi-file-earmark-text-fill"></i></div>
+          <div class="fc-title">报告导出功能</div>
+          <div class="fc-text">支持方案 PDF 导出、数据 CSV 导出、图表图片下载，为科研汇报与工程应用提供完整文档支撑。</div>
+        </div>
+      </div>
+
+      <!-- 创新点 + 应用价值并排 -->
+      <div class="row-flex mb-4">
+        <!-- 创新点 -->
+        <div style="flex:1">
+          <div class="section-title">核心创新点</div>
+          <div class="inno-card">
+            <div class="inno-num" style="background:linear-gradient(135deg,#1677ff,#06b6d4)">1</div>
+            <div>
+              <div class="inno-title">资源感知的初始化策略</div>
+              <div class="inno-text">在 NSGA-III 基础上引入<strong style="color:var(--text-1)">资源能量感知的种群初始化机制</strong>，根据各卫星剩余能量动态分配初始任务，相较随机初始化收敛速度提升约 38%，有效减少无效迭代。</div>
+            </div>
+          </div>
+          <div class="inno-card" style="border-color:rgba(34,197,94,0.3)">
+            <div class="inno-num" style="background:linear-gradient(135deg,#22c55e,#16a34a)">2</div>
+            <div>
+              <div class="inno-title">多目标精英保留机制</div>
+              <div class="inno-text">设计<strong style="color:var(--text-1)">分层精英保留策略</strong>，在进化过程中维护 Pareto 前沿多样性，防止过早收敛。综合收益较标准 NSGA-III 提升 <span class="text-success">+12.4%</span>，Pareto 解集质量显著提高。</div>
+            </div>
+          </div>
+          <div class="inno-card" style="border-color:rgba(245,158,11,0.3)">
+            <div class="inno-num" style="background:linear-gradient(135deg,#f59e0b,#d97706)">3</div>
+            <div>
+              <div class="inno-title">自适应权重调节框架</div>
+              <div class="inno-text">构建<strong style="color:var(--text-1)">动态权重自适应框架</strong>，根据当前迭代阶段自动调整收益、完成率、能耗三目标权重，兼顾全局探索与局部开发，鲁棒性验证通过 20+ 场景测试。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 应用价值 -->
+        <div style="flex:1">
+          <div class="section-title">应用价值</div>
+          <div class="value-grid">
+            <div class="value-card">
+              <div class="value-icon" style="color:#60a5fa"><i class="bi bi-rocket-takeoff-fill"></i></div>
+              <div class="value-title">科研支撑</div>
+              <div class="value-text">为遥感调度领域提供完整的算法验证平台，支持多算法横向对比研究</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" style="color:#4ade80"><i class="bi bi-currency-yen"></i></div>
+              <div class="value-title">效益提升</div>
+              <div class="value-text">较传统人工调度方案收益提升 12%+，资源利用率改善 18%+</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" style="color:#fbbf24"><i class="bi bi-lightning-charge-fill"></i></div>
+              <div class="value-title">节能降耗</div>
+              <div class="value-text">优化任务排序与资源分配，单位任务能耗降低 15.8%</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" style="color:#a78bfa"><i class="bi bi-shield-check-fill"></i></div>
+              <div class="value-title">决策辅助</div>
+              <div class="value-text">自动化方案生成替代人工安排，提供可视化辅助决策报告</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" style="color:#22d3ee"><i class="bi bi-arrow-repeat"></i></div>
+              <div class="value-title">通用扩展</div>
+              <div class="value-text">架构可扩展至无人机调度、物流规划等多场景资源调度问题</div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" style="color:#f87171"><i class="bi bi-file-earmark-text-fill"></i></div>
+              <div class="value-title">成果展示</div>
+              <div class="value-text">提供完整可视化界面，支持科研竞赛与工程演示双重场景</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 团队介绍 -->
+      <div class="section-title">团队成员</div>
+      <div class="team-grid mb-4">
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1677ff,#7c3aed)"><i class="bi bi-person-fill"></i></div>
+          <div class="team-name">成员 A</div>
+          <div class="team-role">算法设计 / 项目负责人</div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-3);line-height:1.8">NSGA-III 改进<br/>多目标优化</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#22c55e,#0891b2)"><i class="bi bi-person-fill"></i></div>
+          <div class="team-name">成员 B</div>
+          <div class="team-role">后端开发 / 数据处理</div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-3);line-height:1.8">Flask 服务<br/>数据管理模块</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="bi bi-person-fill"></i></div>
+          <div class="team-name">成员 C</div>
+          <div class="team-role">前端开发 / 可视化</div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-3);line-height:1.8">ECharts 图表<br/>UI / UX 设计</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)"><i class="bi bi-person-fill"></i></div>
+          <div class="team-name">成员 D</div>
+          <div class="team-role">实验验证 / 报告撰写</div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-3);line-height:1.8">对比实验<br/>文档与汇报</div>
+        </div>
+      </div>
+
+      <!-- 快速跳转 -->
+      <div class="chart-card" style="text-align:center;padding:24px">
+        <div style="font-size:14px;font-weight:600;color:var(--text-1);margin-bottom:16px">快速进入各功能模块</div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="data.html"     class="btn-ghost"><i class="bi bi-database-fill" style="color:#60a5fa"></i> 数据管理</a>
+          <a href="schedule.html" class="btn-primary"><i class="bi bi-cpu-fill"></i> 开始调度</a>
+          <a href="analysis.html" class="btn-ghost"><i class="bi bi-bar-chart-fill" style="color:#4ade80"></i> 结果分析</a>
+          <a href="visual.html"   class="btn-ghost"><i class="bi bi-display-fill" style="color:#fbbf24"></i> 可视化监控</a>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>
